@@ -1,0 +1,109 @@
+/* ----------------------------------------------------------------
+	Canvas: SEO
+-----------------------------------------------------------------*/
+
+/* Root Settings
+-----------------------------------------------------------------*/
+:root {
+	--themecolor:  #fE9603;
+	--basefontsize: 16px;
+	--fontfamily: 'Poppins', sans-serif;
+	--headerboxshadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+	--menufontsize: 15px;
+}
+
+@media (min-width: 992px) {
+
+	.header-size-md.sticky-header-shrink #header-wrap #logo img {
+		height: 70px;
+	}
+
+	.header-size-md.sticky-header-shrink .menu-container > .menu-item > .menu-link {
+		padding-top: 24px; /* (70px - 22px)/2 */
+		padding-bottom: 24px; /* (70px - 22px)/2 */
+	}
+
+}
+
+/* Story Timeline
+-----------------------------------------------------------------*/
+.story-timeline {
+	position: relative;
+	padding-top: 60px;
+}
+
+.story-timeline > .story-timeline-line {
+    position: absolute;
+	display: block;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    width: 5px;
+    border-radius: 0 0 6px 6px;
+    background-image: linear-gradient(to bottom, #005aab 0%, #005aab 100%);
+}
+
+.story-timeline .story-timeline-dots {
+    position: absolute;
+	display: block;
+    top: 0;
+    left: 26px;
+    z-index: 1;
+    width: 26px;
+    height: 36px;
+    margin-left: -13px;
+    background-image: linear-gradient(#005aab 0%, #005aab 100%);
+    border: 6px solid #FFF;
+    border-radius: 50%;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: border-color .3s ease;
+}
+
+.story-timeline > .row {
+	position: relative;
+	padding-left: 40px;
+}
+
+.story-timeline > .row:hover .story-timeline-dots {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	background: #555;
+}
+
+
+/* Story Timeline
+-----------------------------------------------------------------*/
+@media (min-width: 768px) {
+	.story-timeline > .story-timeline-line {
+	    left: 50%;
+	    transform: translateX(-50%);
+	}
+
+	.story-timeline .story-timeline-dots {
+	    left: 50%;
+	    transform: translateX(-50%);
+	    margin-left: 0;
+	}
+
+	.story-timeline > .row {
+		margin-right: -50px;
+		margin-left: -50px;
+		padding-left: 0;
+	}
+
+	.story-timeline > .row > .col,
+	.story-timeline > .row > [class*="col-"] {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+}
+
+[id^="particles-"]  {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
