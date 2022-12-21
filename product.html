@@ -18,18 +18,11 @@
 
 	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<style>
-	center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-	</style>
+	
 
 	<!-- Document Title
 	============================================= -->
-	<title>Product - Daisin Co.,Ltd</title>
+	<title>Products - Daisin Co.,Ltd</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 </head>
@@ -50,7 +43,7 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo">
-							<a href="index.html" class="standard-logo" data-dark-logo="images/daisinlogo-dark.png"><img src="images/daisinlogo.png" alt="Daisin Logo"></a>
+							<a href="index.html" class="standard-logo"><img src="images/daisinlogo.png" alt="Daisin Logo"></a>
 							<a href="index.html" class="retina-logo" data-dark-logo="images/daisinlogo-dark.png"><img src="images/daisinlogo.png" alt="Daisin Logo"></a>
 						</div><!-- #logo end -->
 
@@ -98,7 +91,7 @@
 									</ul>
 								</li>
 								<li class="menu-item">
-									<a id="menu_production" class="menu-link"><div>Production</div></a>
+									<a id="menu_production" class="menu-link" href="production.html"><div>Production</div></a>
 									<ul class="sub-menu-container">
 										<li class="menu-item">
 											<a id="menu_capacity" class="menu-link" href="capacity.html"><div>Our Capacity</div></a>
@@ -176,7 +169,6 @@
 						<form class="top-search-form" action="search.html" method="get">
 							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
 						</form>
-
 					</div>
 				</div>
 			</div>
@@ -184,27 +176,19 @@
 		</header><!-- #header end -->
 		<!-- Content
 		============================================= -->
-		
-			<div class="content-wrap">
-				<div class="container clearfix">
+		<div class="content-wrap">
+            <div class="container clearfix">
 
-					<div class="heading-block topmargin-sm center">
-						<h3 id="txt_pd" style="color:#005aab;">Product</h3>
-					</div>
-                    <div class="row col-mb-50">
-						<div class="col-md-6">
-							<h4 id="txt_pd1">Motorcycle Parts</h4>
-							<a href="images/pic_product2w.gif" data-lightbox="image"><img src="images/pic_product2w.gif" alt="Motorcycle"></a>
-						</div>
+                <div class="heading-block topmargin-sm center">
+                    <h3 id="txt_product" style="color:#005aab;"></h3>
+                </div>
 
-						<div class="col-md-6">
-							<h4 id="txt_pd2">Automobile Parts</h4>
-							<a href="images/pic_product4w.gif" data-lightbox="image"><img src="images/pic_product4w.gif" alt="Automobile"></a>
-						</div>
+                    <div align="center">
+                    <a href="images/products.png" data-lightbox="image"><img src="images/products.png" alt="Products"></a>
 					</div>
-				</div>
-			</div>
-		<!-- #content end -->
+
+            </div>
+        </div><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
@@ -298,7 +282,7 @@
   menu_certificate: "ใบรับรองมาตรฐานสากล",
   menu_awards: "รางวัล",
   menu_working: "วิธีการทำงาน",
-  menu_message: "ข้อความจากผู้บริหารระดับสูง",
+  menu_message: "สารจากผู้บริหารระดับสูง",
   menu_production: "การผลิต",
   menu_capacity: "พื้นที่",
   menu_technology: "เทคโนโลยีและการพัฒนา",
@@ -320,9 +304,7 @@
   menu_employee: "ลิ้งค์สำหรับพนักงาน",
   menu_connect: "Daisin Connect",
   menu_dsc: "DSC internal contact number",
-	  txt_pd: "สินค้า",
-	  txt_pd1: "ชิ้นส่วนรถจักรยานยนต์",
-	  txt_pd2: "ชิ้นส่วนรถยนต์",
+  txt_product: "สินค้า",
 	  footer_name1: "บริษัท ไดซิน จำกัด",
 	  footer_name2: "101/59/3 หมู่20, นวนคร ถ.พหลโยธิน,",
 	  footer_name3: "อำเภอคลองหลวง, ปทุมธานี 12120",
@@ -340,16 +322,16 @@
   menu_awards: "Awards",
   menu_working: "Daisin way of working",
   menu_message: "Massage From Top Management",
-  menu_production: "Production",
-  menu_capacity: "Capacity",
+  menu_production: "Our Production",
+  menu_capacity: "Our Capacity",
   menu_technology: "Production Technology",
   menu_quality: "Quality System",
-  menu_products: "Products",
+  menu_products: "Our Products",
   menu_motor: "Motorcycle Part",
   menu_auto: "Automobile Part",
   menu_pe: "PE Part",
   menu_ev: "EV Part",
-  menu_act: "Activities",
+  menu_act: "Our Activities",
   menu_sus: "Sustainability",
   menu_csr: "CSR",
   menu_contact: "Contact Us",
@@ -361,9 +343,7 @@
   menu_employee: "Employee Link",
   menu_connect: "Daisin Connect",
   menu_dsc: "DSC internal contact number",
-	  txt_pd: "Product",
-	  txt_pd1: "Motorcycle Parts",
-	  txt_pd2: "Automobile Parts",
+  txt_product: "Products",
 	  footer_name1: "Daisin Co.,Ltd",
 	  footer_name2: "101/59/3 Moo20, Navanakron Paholyothin Road,",
 	  footer_name3: "Khlong luang, Patumthani 12120 Thailand",
@@ -405,9 +385,7 @@
 	$("#menu_employee").text(settext("menu_employee"));
 	$("#menu_connect").text(settext("menu_connect"));
 	$("#menu_dsc").text(settext("menu_dsc"));
-		$("#txt_pd").text(settext("txt_pd"));
-		$("#txt_pd1").text(settext("txt_pd1"));
-		$("#txt_pd2").text(settext("txt_pd2"));
+		$("#txt_product").text(settext("txt_product"));
 		$("#footer_name1").text(settext("footer_name1"));
 		$("#footer_name2").text(settext("footer_name2"));
 		$("#footer_name3").text(settext("footer_name3"));

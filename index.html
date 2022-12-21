@@ -15,9 +15,111 @@
 	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="demos/real-estate/real-estate.css" type="text/css" />
 
 	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<style>
+		.nopadding {
+	   padding: 0 !important;
+	}
+
+.mytext {
+  float: clear;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+.hex-container {
+  float: left;
+  height: 150px;
+  width: 250px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:50px;
+}
+.hex-title {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 180px;
+  color: grey;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: bold;
+}
+.hexagon {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hexagon:before, .hexagon:after {
+  background: inherit;
+  content: '';
+  height: inherit;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  z-index: -1;
+}
+.hexagon:before {
+  transform: rotate(-60deg);
+}
+.hexagon:after {
+  transform: rotate(60deg);
+}
+
+
+.hexagon {
+	position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  width: 170px;
+	height: 99px;
+  background: #005aab;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 1;  
+  
+}
+
+.hexagon:before,
+.hexagon:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	transition: background-color 0.25s;
+}
+
+.hexagon:before,
+.hexagon-inside:before {
+	transform: rotate(120deg);
+}
+
+.hexagon:after,
+.hexagon-inside:after {
+	transform: rotate(60deg);
+}
+
+	</style>
 	
 
 	<!-- Document Title
@@ -91,7 +193,7 @@
 									</ul>
 								</li>
 								<li class="menu-item">
-									<a id="menu_production" class="menu-link"><div>Production</div></a>
+									<a id="menu_production" class="menu-link" href="production.html"><div>Production</div></a>
 									<ul class="sub-menu-container">
 										<li class="menu-item">
 											<a id="menu_capacity" class="menu-link" href="capacity.html"><div>Our Capacity</div></a>
@@ -184,7 +286,7 @@
 						<div class="swiper-slide dark">
 							<div class="container">
 								<div class="slider-caption slider-caption-center">
-									<h2 id="txt_welcome" data-animate="fadeInUp">Welcome to Daisin</h2>
+									<h2 id="txt_welcome">Welcome to Daisin</h2>
 									<h3 id="txt_welcome2" class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Aluminium Parts Manufacturer in Thailand</h3>
 								</div>
 							</div>
@@ -198,7 +300,7 @@
 								</div>
 							</div>
 							<div class="video-wrap">
-								<video id="slide-video" poster="images/videos/explore-poster.jpg" preload="auto" loop autoplay muted>
+								<video id="slide-video" poster="images/videos/explore-poster.png" preload="auto" loop autoplay muted>
 								<!-- video id="slide-video" poster="images/videos/explore-poster.png" preload="auto" loop autoplay muted -->	
 									<source src='images/videos/daisin.webm' type='video/webm' />
 									<source src='images/videos/daisin.mp4' type='video/mp4' />
@@ -223,15 +325,54 @@
 				<a href="#" data-scrollto="#content" data-offset="100" class="one-page-arrow dark"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
 
 			</div>
+			
 		</section>
-
 		<!-- Content
 		============================================= -->
 		<section id="content">
 			<div class="content-wrap">
+				<div class="row real-estate-properties">
+					<div class="col-lg-3 nopadding"  data-animate="fadeInUp" data-delay="500">
+						<a href="history.html" style="background: url('images/about1.jpg') no-repeat bottom center; background-size: cover;">
+							<div class="vertical-middle dark center">
+								<div class="heading-block m-0 border-0">
+									<h3>COMPANY PROFILE</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-3 nopadding" data-animate="fadeInUp" data-delay="600">
+						<a href="csr.html" style="background: url('images/รูปที่\ 4.jpg') no-repeat center center; background-size: cover;">
+							<div class="vertical-middle dark center">
+								<div class="heading-block m-0 border-0">
+									<h3>CSR</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+	
+					<div class="col-lg-3 nopadding" data-animate="fadeInUp" data-delay="700">
+						<a href="technology.html" style="background: url('images/รูปที่\ 3.jpg') no-repeat center center; background-size: cover;">
+							<div class="vertical-middle dark center">
+								<div class="heading-block m-0 border-0">
+									<h3>PRODUCTION TECHNOLOGY</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-3 nopadding" data-animate="fadeInUp" data-delay="800">
+						<a href="career.html" style="background: url('demos/real-estate/images/cities/1.jpg') no-repeat center center; background-size: cover;">
+							<div class="vertical-middle dark center">
+								<div class="heading-block m-0 border-0">
+									<h3>CAREER</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<br><br>
 				<div class="container">
 					<div class="row align-items-center">
-
 						<div class="col-lg-5">
 							<div class="heading-block">
 								<h1 style="color:#005aab;">Daisin Co.,Ltd</h1>
@@ -246,118 +387,40 @@
 						<div class="col-lg-7 align-self-end">
 
 							<div class="position-relative overflow-hidden">
-								<img src="images/รูปภาพที่ 6.png" data-animate="fadeInUp" data-delay="100" alt="Chrome" style="margin-bottom: 100px;">							
+								<img src="images/รูปภาพที่ 6.png" data-animate="slideInRight" data-delay="100" alt="Daisin" style="margin-bottom: 100px;">							
 							</div>
 
 						</div>
 
-					</div>
-				</div>
-
-				<div class="section bg-transparent" style="padding: 100px 0;">
-					<div class="container">
-						<div class="row col-mb-50 gutter-lg-50 justify-content-center">
-							<div class="col-lg-4 col-md-5 text-center">
-								<img src="images/mission.svg" alt="Globe Icon" class="mb-5" height="100">
-								<h3 class="font-body h2 mb-4 color">Mission</h3>
-								<p class="lead">We forge ahead in full capability for our customers, consumers and communities with  global perspective creativities and technology to provide the best quality, novelty and worthy product.</p>
-							</div>
-							<div class="col-md-1 text-center d-md-flex justify-content-center align-self-stretch">
-								<div class="border-end border-default d-none d-md-block"></div>
-								<div class="border-top border-default d-block d-md-none"></div>
-							</div>
-
-							<div class="col-lg-4 col-md-5 text-center">
-								<img src="images/vision.svg" alt="Users Icon" class="mb-5" height="100">
-								<h3 class="font-body h2 mb-4 color">Vision</h3>
-								<p class="lead">The best Aluminium Manufacturer and Diecast Technique Automotive Parts of Asia.</p>
-							</div>
-						</div>
 					</div>
 				</div>
 
 				<div class="row clearfix align-items-stretch bottommargin-lg">
+					<h2 align="center" style="color: #005aab;" id="txt_about"></h2>
 
-					<div class="col-lg-3 col-md-6 dark center col-padding" style="background-color: #515875;">
-						<i class="i-plain i-xlarge mx-auto icon-line2-home"></i>
-						<div class="counter counter-lined">June 1975</div>
-						<h5>Established</h5>
-					</div>
-
-					<div class="col-lg-3 col-md-6 dark center col-padding" style="background-color: #576F9E;">
-						<i class="i-plain i-xlarge mx-auto icon-line2-graph"></i>
-						<div class="counter counter-lined"><span data-from="100" data-to="249" data-refresh-interval="100" data-speed="2500"></span>M. Bahts</div>
-						<h5>Capital</h5>
-					</div>
-
-					<div class="col-lg-3 col-md-6 dark center col-padding" style="background-color: #6697B9;">
-						<i class="i-plain i-xlarge mx-auto icon-line-bar-graph-2"></i>
-						<div class="counter counter-lined">Thai 67% </br>Japan 33%*</div>
-						<h5>Shareholder Structure </br> *(Nissin Koygo Co., Ltd)</h5>
-					</div>
-
-					<div class="col-lg-3 col-md-6 dark center col-padding" style="background-color: #88C3D8;">
-						<i class="i-plain i-xlarge mx-auto icon-user"></i>
-						<div class="counter counter-lined">3,850 Employees</div>
-						<h5>No. of Employees </br>(Updated Aug.'16)</h5>
-					</div>
-
-				</div>
-				<!--<div class="section parallax dark mb-0" style="background-image: url('images/services/home-testi-bg.jpg'); padding: 100px 0;" data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
-
-					<div class="heading-block center">
-						<h3>What Clients Say?</h3>
-					</div>
-
-					<div class="fslider testimonial testimonial-full" data-animation="fade" data-arrows="false">
-						<div class="flexslider">
-							<div class="slider-wrap">
-								<div class="slide">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/3.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Similique fugit repellendus expedita excepturi iure perferendis provident quia eaque. Repellendus, vero numquam?</p>
-										<div class="testi-meta">
-											Steve Jobs
-											<span>Apple Inc.</span>
-										</div>
-									</div>
-								</div>
-								<div class="slide">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/2.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
-										<div class="testi-meta">
-											Collis Ta'eed
-											<span>Envato Inc.</span>
-										</div>
-									</div>
-								</div>
-								<div class="slide">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/1.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum!</p>
-										<div class="testi-meta">
-											John Doe
-											<span>XYZ Inc.</span>
-										</div>
-									</div>
-								</div>
-							</div>
+					<div class="hex-container" data-animate="fadeInUp">
+						<div class="hexagon">
+							<h4 class="mytext"><b>Capital</b><br>249M. Bahts</h4>
 						</div>
 					</div>
 
-				</div>-->
+					<div class="hex-container" data-animate="fadeInUp">
+						<div class="hexagon">
+							<h5 class="mytext"><b>Shareholder Structure</b><br>Thai 67%<br>Japan 33%</h5>
+						</div>
+					</div>
+
+					<div class="hex-container" data-animate="fadeInUp">
+						<div class="hexagon">
+							<h4 class="mytext"><b>No. of Employees</b><br>2,289 persons</h4>
+						</div>
+					</div>
+				</div>
 
 				<div class="container clearfix">
+					<h2 align="center" style="color: #005aab;">Associated Company</h2>
 
 					<div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="60" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="6">
-
 						<div class="oc-item"><a href="#"><img src="images/clients/myc.png" alt="Clients"></a></div>
 						<div class="oc-item"><a href="#"><img src="images/clients/daisinal.png" alt="Clients"></a></div>
 						<div class="oc-item"><a href="#"><img src="images/clients/daisinvn.png" alt="Clients"></a></div>
@@ -465,7 +528,7 @@
   menu_certificate: "ใบรับรองมาตรฐานสากล",
   menu_awards: "รางวัล",
   menu_working: "วิธีการทำงาน",
-  menu_message: "ข้อความจากผู้บริหารระดับสูง",
+  menu_message: "สารจากผู้บริหารระดับสูง",
   menu_production: "การผลิต",
   menu_capacity: "พื้นที่",
   menu_technology: "เทคโนโลยีและการพัฒนา",
@@ -491,19 +554,7 @@
   txt_welcome2: "ผู้ผลิตชิ้นส่วนอลูมิเนียมชั้นนำของไทย",
   txt_welcome3: "ไดซิน",
   txt_about1:"ดีแทคจับมือไดซินและเนคเทคยกระดับอุตสาหกรรมผลิตชิ้นส่วนรถยนต์ด้วยเทคโนโลยี 5G ต่อยอดเป็นต้นแบบดันไทยสู่ฮับซัพพลายเชนยานยนต์ในเอเชีย",
-  txt_director: "คณะผู้บริหาร",
-  txt_manoj: "มาโนช	ลี้โกมลชัย",
-  txt_chair: "ประธานกรรมการ",
-  txt_thanin: "ธนินทร์ ลี้โกมลชัย",
-  txt_psd: "ประธานบริษัท",
-  txt_atsushi: "อะสึชิ	ขิมิซุ",
-  txt_vp: "รองประธานบริษัท",
-  txt_kanika: "กรรณิการ์ ลือวรศิริกุล",
-  txt_di1: "กรรมการ",
-  txt_poramatr: "ปรเมศร์ ลี้โกมลชัย",
-  txt_di2: "กรรมการ",
-  txt_yugikasu: "ยูกิคาสุ มิยาชิตะ",
-  txt_di3: "กรรมการ",
+  txt_about:"เกี่ยวกับไดซินในปี 2022",
   footer_name1: "บริษัท ไดซิน จำกัด",
   footer_name2: "101/59/3 หมู่20, นวนคร ถ.พหลโยธิน,",
   footer_name3: "อำเภอคลองหลวง, ปทุมธานี 12120",
@@ -521,16 +572,16 @@ var en = {
   menu_awards: "Awards",
   menu_working: "Daisin way of working",
   menu_message: "Massage From Top Management",
-  menu_production: "Production",
-  menu_capacity: "Capacity",
+  menu_production: "Our Production",
+  menu_capacity: "Our Capacity",
   menu_technology: "Production Technology",
   menu_quality: "Quality System",
-  menu_products: "Products",
+  menu_products: "Our Products",
   menu_motor: "Motorcycle Part",
   menu_auto: "Automobile Part",
   menu_pe: "PE Part",
   menu_ev: "EV Part",
-  menu_act: "Activities",
+  menu_act: "Our Activities",
   menu_sus: "Sustainability",
   menu_csr: "CSR",
   menu_contact: "Contact Us",
@@ -546,19 +597,7 @@ var en = {
   txt_welcome2: "Aluminium Parts Manufacturer in Thailand",
   txt_welcome3: "Welcome to Daisin",
   txt_about1:"Daisin is competent in aluminium parts manufacturing used in automotive industry. We are specialized in the design of diecasting molds, process layouts and machines selection to serve various purposes of customers. Every manufacturing process is strictly controled and continuously improved to ensure the highest safety and quality standard.",
-  txt_director: "BOARD OF DIRECTORS",
-  txt_manoj: "Manoj Leegomonchai",
-  txt_chair: "Chairman",
-  txt_thanin: "Thanin Leegomonchai",
-  txt_psd: "President",
-  txt_atsushi: "Atsushi Shimizu",
-  txt_vp: "Vice President",
-  txt_kanika: "Kannika Luaworasirikun",
-  txt_di1: "Director",
-  txt_poramatr: "Porametr Leegomonchai",
-  txt_di2: "Director",
-  txt_yugikasu: "Yugikasu Miyachita",
-  txt_di3: "Director",
+  txt_about:"About Daisin in 2022",
   footer_name1: "Daisin Co.,Ltd",
   footer_name2: "101/59/3 Moo20, Navanakron Paholyothin Road,",
   footer_name3: "Khlong luang, Patumthani 12120 Thailand",
@@ -604,19 +643,7 @@ function renderlang() {
 	$("#txt_welcome2").text(settext("txt_welcome2"));
 	$("#txt_welcome3").text(settext("txt_welcome3"));
 	$("#txt_about1").text(settext("txt_about1"));
-	$("#txt_manoj").text(settext("txt_manoj"));
-	$("#txt_chair").text(settext("txt_chair"));
-	$("#txt_thanin").text(settext("txt_thanin"));
-	$("#txt_psd").text(settext("txt_psd"));
-	$("#txt_atsushi").text(settext("txt_atsushi"));
-	$("#txt_vp").text(settext("txt_vp"));
-	$("#txt_kanika").text(settext("txt_kanika"));
-	$("#txt_di1").text(settext("txt_di1"));
-	$("#txt_poramatr").text(settext("txt_poramatr"));
-	$("#txt_di2").text(settext("txt_di2"));
-	$("#txt_yugikasu").text(settext("txt_yugikasu"));
-	$("#txt_di3").text(settext("txt_di3"));
-	$("#txt_director").text(settext("txt_director"));
+	$("#txt_about").text(settext("txt_about"));
 	$("#footer_name1").text(settext("footer_name1"));
 	$("#footer_name2").text(settext("footer_name2"));
 	$("#footer_name3").text(settext("footer_name3"));
