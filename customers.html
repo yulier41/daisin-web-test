@@ -25,6 +25,8 @@
 	<title>Major Customers - Daisin Co.,Ltd</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
+	<link rel="stylesheet" href="demos/hosting/hosting.css" type="text/css" />
+
 </head>
 
 <body class="stretched">
@@ -133,18 +135,7 @@
 									</ul>
 								</li>
 								<li class="menu-item">
-									<a id="menu_contact" class="menu-link"><div>Contact Us</div></a>
-									<ul class="sub-menu-container">
-										<li class="menu-item">
-											<a id="menu_nava" class="menu-link" href="contactus.html"><div>PATHUM THANI (HEAD QUARTER)</div></a>
-										</li>
-										<li class="menu-item">
-											<a id="menu_korat" class="menu-link" href="contactus.html"><div>NAKHON RATCHASIMA</div></a>
-										</li>
-										<li class="menu-item">
-											<a id="menu_knn" class="menu-link" href="contactus.html"><div>KHONKAEN</div></a>
-										</li>									
-									</ul>
+									<a id="menu_contact" class="menu-link" href="contactus.html"><div>Contact Us</div></a>
 								</li>
 								<li class="menu-item">
 									<a id="menu_career" class="menu-link" href="career.html"><div>Career</div></a>
@@ -184,31 +175,68 @@
 						<h3 id="txt_cus" style="color:#005aab;">Major Customers</h3>
 					</div>
 
-                    <div class="row col-mb-50">
-						<div class="col-md-6">
-							<h4 id="txt_cus1">Overseas Customers</h4>
-							<ul>
-                                <li id="txt_cus11">USA</li>
-                                <li id="txt_cus12">China</li>
-                                <li id="txt_cus13">Brazil</li>
-                                <li id="txt_cus14">Indonesia</li>
-                                <li id="txt_cus15">Japan</li>
-                                <li id="txt_cus16">Vietnam</li>
-                                <li id="txt_cus17">Italy</li>
-                            </ul>
+					<div class="row">
+						<div class="col-lg-5 col-md-6">
+							<div class="heading-block mt-md-3 mt-0">
+								<h4>Overseas Customers</h4>
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<ul class="iconlist ms-0">
+										<li><img src="images/us.png" alt="Image">USA</li>
+										<li><img src="images/br.png" alt="Image">Brazil</li>
+										<li><img src="images/ja.png" alt="Image">Japan</li>
+										<li><img src="images/it.png" alt="Image">Italy</li>
+									</ul>
+								</div>
+								<div class="col-6">
+									<ul class="iconlist ms-0">
+										<li><img src="images/cn.png" alt="Image">China</li>
+										<li><img src="images/in.png" alt="Image">Indonesia</li>
+										<li><img src="images/vn.png" alt="Image">Vietnam</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-6">
+							<div id="hotspot-img" class="hotspot-img mt-2 responsive-hotspot-wrap">
+						<img src="demos/hosting/images/svg/map.png" class="img-responsive" alt="Image">
+
+						<div class="hot-spot" data-x="450" data-y="522">
+							<div class="circle"></div>
+							<div class="tooltip"><p>USA</p></div>
 						</div>
 
-						<div class="col-md-6">
-							<h4 id="txt_cus2">Domestic Customers</h4>
-							<ul>
-                                <li id="txt_cus21">Honda</li>
-                                <li id="txt_cus22">Suzuki</li>
-                                <li id="txt_cus23">Kawasaki</li>
-                                <li id="txt_cus24">Yamaha</li>
-                                <li id="txt_cus25">Toyota</li>
-                                <li id="txt_cus26">Isuzu</li>
-                                <li id="txt_cus27">Mitsubishi</li>
-                              </ul>
+						<div class="hot-spot" data-x="2000" data-y="600">
+							<div class="circle"></div>
+							<div class="tooltip"><p>China</p></div>
+						</div>
+
+						<div class="hot-spot" data-x="2050" data-y="860">
+							<div class="circle"></div>
+							<div class="tooltip"><p>Indonesia</p></div>
+						</div>
+
+						<div class="hot-spot" data-x="2020" data-y="750">
+							<div class="circle"></div>
+							<div class="tooltip"><p>Vietnam</p></div>
+						</div>
+
+						<div class="hot-spot" data-x="2250" data-y="560">
+							<div class="circle"></div>
+							<div class="tooltip"><p>Japan</p></div>
+						</div>
+
+						<div class="hot-spot" data-x="1330" data-y="490">
+							<div class="circle"></div>
+							<div class="tooltip"><p>Italy</p></div>
+						</div>
+
+						<div class="hot-spot" data-x="880" data-y="990">
+							<div class="circle"></div>
+							<div class="tooltip"><p>Brazil</p></div>
+						</div>
+					</div>
 						</div>
 					</div>
 				</div>
@@ -298,6 +326,9 @@
 	============================================= -->
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
+	<script src="js/jquery.hotspot.js"></script>
+	<script src="js/plugins.infinitescroll.js"></script>
+	<script src="js/components/rangeslider.min.js"></script>
 	<script>
 		var th = {
 			menu_inside: "รู้จักไดซิน",
@@ -487,10 +518,46 @@
 	
 	renderlang()
 		</script>
+		<script>
+			jQuery(window).on( 'load', function(){
+	
+				let $container = $('#posts');
+	
+				function blogTimelineEntries() {
+					$('.post-timeline').find('.entry:not(.entry-date-section)').each( function(){
+						let position = $(this).position();
+						if( position.left === 0 ) {
+							$(this).removeClass('alt');
+						} else {
+							$(this).addClass('alt');
+						}
+						$(this).find('.entry-timeline').fadeIn();
+					});
+	
+					$('.entry.entry-date-section').next().next().find('.entry-timeline').css({ 'top': '70px' });
+				}
+	
+				$container.on( 'layoutComplete', function() {
+					blogTimelineEntries();
+				});
+	
+				$(window).resize(function() {
+					$container.isotope('layout');
+					setTimeout( function(){
+						blogTimelineEntries();
+					}, 2500 );
+				});
+	
+			});
+			
+			jQuery(window).on( 'load', function(){
+			$('#hotspot-img').hotSpot();
+		});
+		</script>
 
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
-
+	
 </body>
 </html>

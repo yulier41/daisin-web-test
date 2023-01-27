@@ -23,100 +23,9 @@
 		.nopadding {
 	   padding: 0 !important;
 	}
-
-.mytext {
-  float: clear;
-  color: white;
-  font-weight: normal;
-  text-align: center;
-}
-.hex-container {
-  float: left;
-  height: 150px;
-  width: 250px;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:50px;
-}
-.hex-title {
-  position: relative;
-  text-align: center;
-  margin: 0 auto;
-  width: 180px;
-  color: grey;
-  font-style: italic;
-  font-size: 16px;
-  font-weight: bold;
-}
-.hexagon {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  height: 150px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-.hexagon:before, .hexagon:after {
-  background: inherit;
-  content: '';
-  height: inherit;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
-  z-index: -1;
-}
-.hexagon:before {
-  transform: rotate(-60deg);
-}
-.hexagon:after {
-  transform: rotate(60deg);
-}
-
-
-.hexagon {
-	position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  width: 170px;
-	height: 99px;
-  background: #005aab;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  position: relative;
-  z-index: 1;  
-  
-}
-
-.hexagon:before,
-.hexagon:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: inherit;
-	transition: background-color 0.25s;
-}
-
-.hexagon:before,
-.hexagon-inside:before {
-	transform: rotate(120deg);
-}
-
-.hexagon:after,
-.hexagon-inside:after {
-	transform: rotate(60deg);
+	img.zoom:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  transform: scale(1.2); 
 }
 
 	</style>
@@ -235,18 +144,7 @@
 									</ul>
 								</li>
 								<li class="menu-item">
-									<a id="menu_contact" class="menu-link"><div>Contact Us</div></a>
-									<ul class="sub-menu-container">
-										<li class="menu-item">
-											<a id="menu_nava" class="menu-link" href="contactus.html"><div>PATHUM THANI (HEAD QUARTER)</div></a>
-										</li>
-										<li class="menu-item">
-											<a id="menu_korat" class="menu-link" href="contactus.html"><div>NAKHON RATCHASIMA</div></a>
-										</li>
-										<li class="menu-item">
-											<a id="menu_knn" class="menu-link" href="contactus.html"><div>KHONKAEN</div></a>
-										</li>									
-									</ul>
+									<a id="menu_contact" class="menu-link" href="contactus.html"><div>Contact Us</div></a>
 								</li>
 								<li class="menu-item">
 									<a id="menu_career" class="menu-link" href="career.html"><div>Career</div></a>
@@ -295,15 +193,14 @@
 						<div class="swiper-slide dark">
 							<div class="container">
 								<div class="slider-caption slider-caption-center">
-									<h2 id="txt_welcome3" data-animate="fadeInUp">Daisin</h2>
-									<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Daisin is highly regarded as one of Thailand 's leading aluminium vehicle parts manafacturers.</p>
+									<!--<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Daisin is highly regarded as one of Thailand 's leading aluminium vehicle parts manafacturers.</p>-->
 								</div>
 							</div>
 							<div class="video-wrap">
 								<video id="slide-video" poster="images/videos/explore-poster.png" preload="auto" loop autoplay muted>
 								<!-- video id="slide-video" poster="images/videos/explore-poster.png" preload="auto" loop autoplay muted -->	
-									<source src='images/videos/daisin.webm' type='video/webm' />
-									<source src='images/videos/daisin.mp4' type='video/mp4' />
+									<source src='images/videos/daisin2.webm' type='video/webm' />
+									<source src='images/videos/daisin2.mp4' type='video/mp4' />
 								</video>
 								<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
 							</div>
@@ -332,8 +229,8 @@
 		<section id="content">
 			<div class="content-wrap">
 				<div class="row real-estate-properties">
-					<div class="col-lg-3 nopadding"  data-animate="fadeInUp" data-delay="500">
-						<a href="history.html" style="background: url('images/about1.jpg') no-repeat bottom center; background-size: cover;">
+					<div class="col-lg-3 nopadding"  data-animate="fadeInUp" data-delay="500" >
+						<a href="history.html"  style="background: url('images/about1.jpg') no-repeat bottom center; background-size: cover;">
 							<div class="vertical-middle dark center">
 								<div class="heading-block m-0 border-0">
 									<h3>COMPANY PROFILE</h3>
@@ -361,8 +258,8 @@
 						</a>
 					</div>
 					<div class="col-lg-3 nopadding" data-animate="fadeInUp" data-delay="800">
-						<a href="career.html" style="background: url('demos/real-estate/images/cities/1.jpg') no-repeat center center; background-size: cover;">
-							<div class="vertical-middle dark center">
+						<a class="zoom" href="career.html" style="background: url('demos/real-estate/images/cities/1.jpg') no-repeat center center; background-size: cover;">
+							<div class="vertical-middle dark center zoom">
 								<div class="heading-block m-0 border-0">
 									<h3>CAREER</h3>
 								</div>
@@ -377,7 +274,7 @@
 							<div class="heading-block">
 								<h1 style="color:#005aab;">Daisin Co.,Ltd</h1>
 							</div>
-							<img src="images/รูปที่ 5.jpeg" alt="Avatar" style="width:300px;height:300px;border-radius:50%;margin-left: auto;">
+							<img src="images/รูปที่ 5.jpeg" alt="Avatar" class="lift focus" style="width:300px;height:300px;border-radius:50%;margin-left: auto;">
 							<br><br>
 							<p class="lead" id="txt_about1"></p>
 							<!--<p class="lead">As a result of our capabilities and lufelong experience, Daisin is highly regarded as one of Thailand 's leading aluminium vehicle parts manafacturers.</p>-->
@@ -392,28 +289,6 @@
 
 						</div>
 
-					</div>
-				</div>
-
-				<div class="row clearfix align-items-stretch bottommargin-lg">
-					<h2 align="center" style="color: #005aab;" id="txt_about"></h2>
-
-					<div class="hex-container" data-animate="fadeInUp">
-						<div class="hexagon">
-							<h4 class="mytext"><b>Capital</b><br>249M. Bahts</h4>
-						</div>
-					</div>
-
-					<div class="hex-container" data-animate="fadeInUp">
-						<div class="hexagon">
-							<h5 class="mytext"><b>Shareholder Structure</b><br>Thai 67%<br>Japan 33%</h5>
-						</div>
-					</div>
-
-					<div class="hex-container" data-animate="fadeInUp">
-						<div class="hexagon">
-							<h4 class="mytext"><b>No. of Employees</b><br>2,289 persons</h4>
-						</div>
 					</div>
 				</div>
 
