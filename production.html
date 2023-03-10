@@ -142,6 +142,13 @@
           transform: rotateY(180deg);
           color: black;
         }
+        table, td, tr {
+          text-align: center;
+		  border: 1px solid #000000;
+        }
+		caption {
+  		  caption-side: top;
+		}
 
 
         </style>
@@ -260,10 +267,10 @@
 									<a id="menu_employee" class="menu-link"><div>Employee Link</div></a>
 									<ul class="sub-menu-container">
 										<li class="menu-item">
-											<a id="menu_connect" class="menu-link" href="daisinconnect.html"><div>Daisin Connect</div></a>
+											<a id="menu_connect" class="menu-link" target="_blank" href="http://58.82.133.114/dsc-hr/HOMEdaisinconnect.html"><div>Daisin Connect</div></a>
 										</li>
 										<li class="menu-item">
-											<a id="menu_dsc" class="menu-link" href="dscinternal.html"><div>DSC internal contact number</div></a>
+											<a id="menu_dsc" class="menu-link" target="_blank" href="https://docs.google.com/spreadsheets/d/1dnOV6O7OcvaaGGFoZLYB9sKEqj4sSaRi/edit#gid=1283501544"><div>DSC internal contact number</div></a>
 										</li>									
 									</ul>
 								</li>
@@ -291,62 +298,27 @@
                     <h3 id="txt_product" style="color:#005aab;"></h3>
                 </div>
 
-                <div class="row justify-content-center col-mb-50">
-                    <div class="col-sm-6 col-md-4 text-center">
-                        <div class="flip-box">
-                            <div class="flip-box-inner">
-                              <div class="flip-box-front">
-                                <img src="images/10-modified.png" alt="Paris">
-                              </div>
-                              <div class="flip-box-back">
-                                <h3 style="margin-top: 30%; color: #005aab;"><u>Gravity Die Casting</u></h3>
-                                <span>Filling: ใช้แรงโน้มถ่วงในการเท/ความเร็วอลูมิเนียม < 1 m/sec</span>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4 text-center">
-                        <div class="flip-boxx">
-                            <div class="flip-boxx-inner">
-                              <div class="flip-boxx-front">
-                                <img src="images/11-modified.png" alt="Paris">
-                              </div>
-                              <div class="flip-boxx-back">
-                                <h3 style="margin-top: 30%;color: #005aab;"><u>Low Pressure Die Casting</u></h3>
-                                <span>Filling: ใช้ความดัน 1 Bar ในการดันอลูมิเนียมเหลวเข้าแม่พิมพ์/ความเร็วอลูมิเนียมเหลว < 1 m/sec</span>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4 text-center">
-                        <div class="flip-boxxx">
-                            <div class="flip-boxxx-inner">
-                              <div class="flip-boxxx-front">
-                                <img src="images/12-modified.png" alt="Paris">
-                              </div>
-                              <div class="flip-boxxx-back">
-                                <h3 style="margin-top: 30%;color: #005aab;"><u>High Pressure Die Casting</u></h3>
-                                <span>Filling: ใช้ความดัน 10-20 MPa ในการฉีดอลูมิเนียมเหลวเข้าแม่พิมพ์/ความเร็วอลูมิเนียมที่ Ingate = 30-60 m/sec</span>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
+                <div class="col-mb-50" align="center">
+					<div class="col-12">
+						<video autoplay loop muted width="100%">
+							<source src="images/videos/VDO DIE-CASTING.mp4" type="video/mp4">
+						  </video>
+					</div>
                 </div>
-                <br><br><br>
-
-                <div class="container clearflix">
-                    <div class="col-12">
-                    <h3 style="color:#005aab;">Flow Process</h3>
-                    <img src="images/flow.png" alt="Flow Process">
-                    </div>
+                <br>
+                <div class="col-mb-50" align="center">
+					<div class="col-12">
+					<video autoplay loop muted width="100%">
+						<source src="images/videos/VDO Flow process production .mp4" type="video/mp4">
+					  </video>
+					</div>
                 </div>
 				<br>
 
 				<div class="container clearflix">
 					<h3 style="color:#005aab;">The number of Die-casting machines</h3>
 					<div class="table-responsive" align="center" data-animate="slideInUp">
+						<caption><h3>Update on Y2022</h3></caption>
 						<table class="table table-bordered" text-align="center" style="width: 65%"> 
 							<thead class="thead-dark">
 								<tr style="background-color: #5ff3ca;">
@@ -360,7 +332,7 @@
 							</thead>
 							<tbody>
 								<tr style="background-color: #06686d; color: white;">
-									<td class="fw-semibold" rowspan="7" style="vertical-align : middle">HPDC</td>
+									<td class="fw-semibold" rowspan="8" style="vertical-align : middle">HPDC</td>
                                     <td>135t</td>
 									<td>6</td>
 									<td>-</td>
@@ -402,6 +374,13 @@
 									<td>-</td>
 									<td>3</td>
 								</tr>
+								<tr style="background-color: #06686d;color: white;">
+									<td>850t</td>
+									<td>2</td>
+									<td>2</td>
+									<td>-</td>
+									<td>4</td>
+								</tr>
                                 <tr style="background-color: #06686d;color: white;">
 									<td>1650t</td>
 									<td>2</td>
@@ -440,11 +419,32 @@
 									<td>36</td>
 								</tr>
                                 <tr style="background-color: #262626;color: white;">
-                                    <td class="fw-semibold" colspan="2">Total</td>
+                                    <td class="fw-semibold" colspan="2">DC Total</td>
 									<td>46</td>
 									<td>90</td>
 									<td>19</td>
 									<td>155</td>
+								</tr>
+								<tr style="background-color: #00b0f0;color: white;">
+                                    <td class="fw-semibold" colspan="2">TC machining</td>
+									<td>113</td>
+									<td>194</td>
+									<td>56</td>
+									<td>363</td>
+								</tr>
+								<tr style="background-color: #01e9ef;color: white;">
+                                    <td class="fw-semibold" colspan="2">NC machining</td>
+									<td>45</td>
+									<td>22</td>
+									<td>-</td>
+									<td>67</td>
+								</tr>
+								<tr style="background-color: #262626;color: white;">
+                                    <td class="fw-semibold" colspan="2">Machining Total</td>
+									<td>158</td>
+									<td>216</td>
+									<td>56</td>
+									<td>430</td>
 								</tr>
 							</tbody>
 						</table>
@@ -494,9 +494,9 @@
 										<h4>Company</h4>
 
 										<ul>
-											<li><a id="footer_about" href="https://codex.wordpress.org/">About Us</a></li>
-											<li><a id="footer_map" href="https://wordpress.org/support/forum/requests-and-feedback">Site Map</a></li>
-											<li><a id="footer_contact" href="https://wordpress.org/extend/plugins/">Contact Us</a></li>
+											<li><a  href="history.html">About Us</a></li>
+											<li><a  href="production.html">Our Production</a></li>
+											<li><a  href="contactus.html">Contact Us</a></li>
 										</ul>
 
 									</div>
@@ -540,34 +540,34 @@
 		var th = {
 			menu_inside: "รู้จักไดซิน",
   menu_profile: "ข้อมูลบริษัท",
-  menu_director: "คณะผู้บริหาร",
-  menu_customer: "ลูกค้าหลัก",
-  menu_certificate: "ใบรับรองมาตรฐานสากล",
+  menu_director: "คณะกรรมการบริษัท",
+  menu_customer: "ลูกค้ารายใหญ่",
+  menu_certificate: "ประกาศนียบัตร",
   menu_awards: "รางวัล",
-  menu_working: "วิธีการทำงาน",
-  menu_message: "สารจากผู้บริหารระดับสูง",
-  menu_production: "การผลิต",
+  menu_working: "Daisin way of working",
+  menu_message: "สารจากประธาน",
+  menu_production: "การผลิตของไดซิน",
   menu_capacity: "พื้นที่",
-  menu_technology: "เทคโนโลยีและการพัฒนา",
-  menu_quality: "คุณภาพของระบบ",
-  menu_products: "สินค้า",
-  menu_motor: "ชิ้นส่วนรถจักรยานยนต์",
-  menu_auto: "ชิ้นส่วนรถยนต์",
-  menu_pe: "ชิ้นส่วน PE",
-  menu_ev: "ชิ้นส่วน EV",
-  menu_act: "กิจกรรม",
-  menu_sus: "Sustainability",
-  menu_csr: "CSR",
+  menu_technology: "เทคโนโลยีการผลิต",
+  menu_quality: "ระบบการควบคุมคุณภาพ",
+  menu_products: "ผลิตภัณฑ์ของไดซิน",
+  menu_motor: "Motorcycle Part",
+  menu_auto: "Automobile Part",
+  menu_pe: "PE Part",
+  menu_ev: "EV Part",
+  menu_act: "กิจกรรมของไดซิน",
+  menu_sus: "แนวทางการพัฒนาแบบยั่งยืน",
+  menu_csr: "กิจกรรมเพื่อสังคม",
   menu_contact: "ติดต่อเรา",
   menu_nava: "สาขาหลัก ปทุมธานี",
   menu_korat: "สาขา นครราชสีมา",
   menu_knn: "สาขา ขอนแก่น",
-  menu_career: "สมัครงาน",
+  menu_career: "ร่วมงานกับไดซิน",
   menu_search: "ค้นหา..",
   menu_employee: "ลิ้งค์สำหรับพนักงาน",
   menu_connect: "Daisin Connect",
   menu_dsc: "DSC internal contact number",
-  txt_product: "การผลิต",
+  txt_product: "การผลิตของไดซิน",
 	  footer_name1: "บริษัท ไดซิน จำกัด",
 	  footer_name2: "101/59/3 หมู่20, นวนคร ถ.พหลโยธิน,",
 	  footer_name3: "อำเภอคลองหลวง, ปทุมธานี 12120",
@@ -606,7 +606,7 @@
   menu_employee: "Employee Link",
   menu_connect: "Daisin Connect",
   menu_dsc: "DSC internal contact number",
-  txt_product: "DIE-CASTING",
+  txt_product: "Production Technology",
 	  footer_name1: "Daisin Co.,Ltd",
 	  footer_name2: "101/59/3 Moo20, Navanakron Paholyothin Road,",
 	  footer_name3: "Khlong luang, Patumthani 12120 Thailand",
