@@ -3922,6 +3922,9 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
 	.menu-container > .menu-item:not(.mega-menu) .sub-menu-container:not([class*='col']) {
 		width: 220px;
 	}
+	.menu-container > .menu-item.special-submenu .sub-menu-container:not([class*='col']) {
+		width: 50px;
+	}
 
 	/* Sub-Menu On-Hover Dropdown */
 	.primary-menu:not(.on-click) .menu-item:not(.mega-menu) .sub-menu-container,

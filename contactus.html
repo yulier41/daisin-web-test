@@ -140,8 +140,15 @@
 										</li>									
 									</ul>
 								</li>
-								<li class="menu-item">
-									<a class="menu-link" id="btn_language" onclick="togglelang()" href=""><div>EN</div></a>
+								<li class="menu-item special-submenu">
+									<a href="#"><img id="lang_img" src="images/us.png" alt="Lang"></a>
+									<ul class="sub-menu-container">
+									  <li class="top-links-item">
+										<a href="#" onclick="togglelang()">
+										  <img id="sub_lang_img" src="images/th.png" alt="Lang">
+										</a>
+									  </li>
+									</ul>
 								</li>							
 							</ul>
 	
@@ -183,7 +190,7 @@
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494376.6618696936!2d101.10579138702637!3d14.523813025345268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31194e6e4278b6a7%3A0xdd27a886e29e52e7!2sDaisin%20Company%20Limited!5e0!3m2!1sen!2sth!4v1670575769452!5m2!1sen!2sth" width="416" height="294.11" allowfullscreen></iframe>
                            </div>
 						   <div class="col-md-4">
-                            <a href="images/koratmap.jpg" data-lightbox="image"><img src="images/koratmap.jpg" alt="Korat" width="416" height="294.11"></a>
+                            <a href="images/KR.png" data-lightbox="image"><img src="images/KR.png" alt="Korat" width="416" height="294.11"></a>
                            </div>
 						   <div class="col-md-4">
 							<h3 id="txt_korat">2nd Plant (Korat)</h3>
@@ -202,7 +209,7 @@
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.2446864409594!2d102.70251551527235!3d16.412394834508195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3122640e6b7f0333%3A0xe838c022d727e64!2sDAISIN%20CO.%2C%20LTD.%20(Khonkhaen)!5e0!3m2!1sen!2sth!4v1670575908637!5m2!1sen!2sth" width="416" height="294.11" allowfullscreen></iframe>
                            </div>
 						   <div class="col-md-4">
-                            <a href="images/kknmap.jpg" data-lightbox="image"><img src="images/kknmap.jpg" alt="KhonKaen" width="416" height="294.11"></a>
+                            <a href="images/KKN.png" data-lightbox="image"><img src="images/KKN.png" alt="KhonKaen" width="416" height="294.11"></a>
                            </div>
 						   <div class="col-md-4">
 							<h3 id="txt_knn">3rd Plant (Khonkaen)</h3>
@@ -212,6 +219,7 @@
 							<div id="txt_knn4"></div><br>
 						</div>
                            </div>
+				</div>
 				</div>
 		<!-- #content end -->
 
@@ -350,7 +358,9 @@
   footer_about: "เกี่ยวกับเรา",
   footer_map: "ผังเว็บไซต์",
   footer_contact: "ติดต่อเรา",
-  btn_language: "ไทย"
+  btn_language: "ไทย",
+	  img_src: "images/th.png",
+	  sub_img_src: "images/us.png"
 };
 var en = {
 	menu_inside: "About Daisin",
@@ -402,12 +412,16 @@ var en = {
   footer_about: "About Us",
   footer_map: "Site Map",
   footer_contact: "Contact Us",
-  btn_language: "EN"
+  btn_language: "EN",
+	  img_src: "images/us.png",
+	  sub_img_src: "images/th.png"
 };
 
 function renderlang() {
   if (!localStorage.lang) {
     localStorage.setItem("lang", "en");
+        $("#lang_img").attr("src", en.img_src);
+    	$("#sub_lang_img").attr("src", en.sub_img_src);
   } else {
     $("#menu_inside").text(settext("menu_inside"));
     $("#menu_profile").text(settext("menu_profile"));
@@ -458,20 +472,38 @@ function renderlang() {
 	$("#footer_map").text(settext("footer_map"));
 	$("#footer_contact").text(settext("footer_contact"));
     $("#btn_language").text(settext("btn_language"));
+		$("#lang_img").attr("src", settext("img_src"));
+    	$("#sub_lang_img").attr("src", settext("sub_img_src"));
   }
 }
 
 function settext(key) {
+	  if (localStorage.lang == "en") {
+		return en[key];
+	  } else {
+		return th[key];
+	  }
+	}
+	function setSubImgSrc() {
   if (localStorage.lang == "en") {
-    return en[key];
+    return en.sub_img_src;
   } else {
-    return th[key];
+    return th.sub_img_src;
+  }
+}
+	function setSubImgSrc() {
+  if (localStorage.lang == "en") {
+    return en.sub_img_src;
+  } else {
+    return th.sub_img_src;
   }
 }
 
 function togglelang() {
   if (localStorage.lang == "en") localStorage.setItem("lang", "th");
   else if (localStorage.lang == "th") localStorage.setItem("lang", "en");
+        $("#lang_img").attr("src", en.img_src);
+    	$("#sub_lang_img").attr("src", en.sub_img_src);
 
   renderlang();
   return "now language: " + localStorage.lang;

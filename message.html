@@ -139,8 +139,15 @@
 										</li>									
 									</ul>
 								</li>
-								<li class="menu-item">
-									<a class="menu-link" id="btn_language" onclick="togglelang()" href=""><div>EN</div></a>
+								<li class="menu-item special-submenu">
+									<a href="#"><img id="lang_img" src="images/us.png" alt="Lang"></a>
+									<ul class="sub-menu-container">
+									  <li class="top-links-item">
+										<a href="#" onclick="togglelang()">
+										  <img id="sub_lang_img" src="images/th.png" alt="Lang">
+										</a>
+									  </li>
+									</ul>
 								</li>							
 							</ul>
 	
@@ -159,30 +166,27 @@
 		============================================= -->
 		<div class="content-wrap">
 			<div class="container clearfix">
+				<div class="heading-block topmargin-sm center">
+					<h3 id="txt_capacity" style="color:#005aab;"></h3>
+				</div>
 
-					<div class="heading-block topmargin-sm center">
-						<h3 id="txt_capacity" style="color:#005aab;"></h3>
+				<div class="row col-mb-50">
+					<div class="col-md-4">
+						<a href="#"><img src="images/team/DS_2.jpg" alt="Blog Single"></a>
 					</div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 page-heading">
-										<div class="entry-content mt-0">
 
-											<!-- Entry Image
-											============================================= -->
-											<div class="image alignleft" style="margin-top: -50px;">
-												<a href="#"><img src="images/team/DS_2.jpg" alt="Blog Single" width="485"></a>
-											</div><!-- .entry-image end -->
-	
-											<h2 id="txt_prin"></h2>
-											<p id="txt_prin2"></p>
-											<br>
-											<h2 id="txt_gui"></h2>
-											<div id="txt_gui1" style="margin-bottom: 10px;"></div>
-											<div id="txt_gui2"style="margin-bottom: 10px;"></div>
-											<div id="txt_gui3"style="margin-bottom: 10px;"></div>
-											<div id="txt_gui4" style="margin-bottom: 10px;"></div>
-											<div id="txt_gui5"></div>
-										</div>
-                                </div> 
+					<div class="col-md-8">
+						<h2 id="txt_prin"></h2>
+						<p id="txt_prin2"></p>
+						<h2 id="txt_gui"></h2>
+						<div id="txt_gui1" style="margin-bottom: 10px;"></div>
+						<div id="txt_gui2"style="margin-bottom: 10px;"></div>
+						<div id="txt_gui3"style="margin-bottom: 10px;"></div>
+						<div id="txt_gui4" style="margin-bottom: 10px;"></div>
+						<div id="txt_gui5"></div>				
+					</div>
+				</div>
+					   
 			</div>
 		</div>
 			
@@ -319,7 +323,9 @@
 	  footer_about: "เกี่ยวกับเรา",
 	  footer_map: "ผังเว็บไซต์",
 	  footer_contact: "ติดต่อเรา",
-	  btn_language: "ไทย"
+	  btn_language: "ไทย",
+	  img_src: "images/th.png",
+	  sub_img_src: "images/us.png"
 	};
 	var en = {
 		menu_inside: "About Daisin",
@@ -367,12 +373,16 @@
 	  footer_about: "About Us",
 	  footer_map: "Site Map",
 	  footer_contact: "Contact Us",
-	  btn_language: "EN"
+	  btn_language: "EN",
+	  img_src: "images/us.png",
+	  sub_img_src: "images/th.png"
 	};
 	
 	function renderlang() {
 	  if (!localStorage.lang) {
 		localStorage.setItem("lang", "en");
+        $("#lang_img").attr("src", en.img_src);
+    	$("#sub_lang_img").attr("src", en.sub_img_src);
 	  } else {
 		$("#menu_inside").text(settext("menu_inside"));
     $("#menu_profile").text(settext("menu_profile"));
@@ -418,6 +428,8 @@
 		$("#footer_map").text(settext("footer_map"));
 		$("#footer_contact").text(settext("footer_contact"));
 		$("#btn_language").text(settext("btn_language"));
+		$("#lang_img").attr("src", settext("img_src"));
+    	$("#sub_lang_img").attr("src", settext("sub_img_src"));
 	  }
 	}
 	
@@ -428,10 +440,19 @@
 		return th[key];
 	  }
 	}
+	function setSubImgSrc() {
+  if (localStorage.lang == "en") {
+    return en.sub_img_src;
+  } else {
+    return th.sub_img_src;
+  }
+}
 	
 	function togglelang() {
 	  if (localStorage.lang == "en") localStorage.setItem("lang", "th");
 	  else if (localStorage.lang == "th") localStorage.setItem("lang", "en");
+        $("#lang_img").attr("src", en.img_src);
+    	$("#sub_lang_img").attr("src", en.sub_img_src);
 	
 	  renderlang();
 	  return "now language: " + localStorage.lang;
