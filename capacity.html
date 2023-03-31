@@ -63,6 +63,9 @@
 						<nav class="primary-menu">
 							<ul class="me-0 border-0 menu-container">
 								<li class="menu-item">
+									<a id="menu_home" class="menu-link" href="index.html"><div>Home</div></a>
+								</li>
+								<li class="menu-item">
 									<a id="menu_inside" class="menu-link"><div>Inside Daisin</div></a>
 									<ul class="sub-menu-container">
 										<li class="menu-item">
@@ -434,7 +437,8 @@
 	  sub_img_src: "images/us.png"
 	};
 	var en = {
-		menu_inside: "About Daisin",
+		menu_inside: "About Us",
+  menu_home: "Home",
  menu_profile: "Company Profile",
   menu_director: "Board of Directors",
   menu_customer: "Major Customers",
@@ -491,7 +495,8 @@
         $("#lang_img").attr("src", en.img_src);
     	$("#sub_lang_img").attr("src", en.sub_img_src);
 	  } else {
-		$("#menu_inside").text(settext("menu_inside"));
+		 $("#menu_inside").text(settext("menu_inside"));
+	$("#menu_home").text(settext("menu_home"));
     $("#menu_profile").text(settext("menu_profile"));
     $("#menu_director").text(settext("menu_director"));
 	$("#menu_customer").text(settext("menu_customer"));
