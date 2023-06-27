@@ -156,12 +156,10 @@
 									</ul>
 								</li>
 								<li class="menu-item special-submenu">
-									<a href="#"><img id="lang_img" src="images/us.png" alt="Lang"></a>
+									<a class="menu-link" id="btn_language" href=""><div>EN</div></a>
 									<ul class="sub-menu-container">
 									  <li class="top-links-item">
-										<a href="#" onclick="togglelang()">
-										  <img id="sub_lang_img" src="images/th.png" alt="Lang">
-										</a>
+										<a class="menu-link"  onclick="togglelang()" id="sub_btn_language" href=""><div>TH</div></a>
 									  </li>
 									</ul>
 								</li>
@@ -382,8 +380,7 @@
 	  footer_map: "ผังเว็บไซต์",
 	  footer_contact: "ติดต่อเรา",
 	  btn_language: "ไทย",
-	  img_src: "images/th.png",
-	  sub_img_src: "images/us.png"
+  sub_btn_language: "ENG"
 	};
 	var en = {
 		menu_inside: "About Us",
@@ -434,9 +431,8 @@
 	  footer_about: "About Us",
 	  footer_map: "Site Map",
 	  footer_contact: "Contact Us",
-	  btn_language: "EN",
-	  img_src: "images/us.png",
-	  sub_img_src: "images/th.png",
+	  btn_language: "ENG",
+  sub_btn_language: "ไทย",
 	};
 	
 	function renderlang() {
@@ -493,8 +489,7 @@
 		$("#footer_map").text(settext("footer_map"));
 		$("#footer_contact").text(settext("footer_contact"));
 		$("#btn_language").text(settext("btn_language"));
-		$("#lang_img").attr("src", settext("img_src"));
-    	$("#sub_lang_img").attr("src", settext("sub_img_src"));
+    $("#sub_btn_language").text(settext("sub_btn_language"));
 	  }
 	}
 	
