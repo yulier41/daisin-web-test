@@ -2801,8 +2801,8 @@ img.lazy:not([src]) {
 .fslider .slide > a > img {
 	position: relative;
 	display: block;
-	width: 405px;
-	height: 227px;
+	width: 990px;
+	height: 550px;
 	overflow: hidden;
 	-webkit-backface-visibility: hidden;
 }
