@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 	<link rel="stylesheet" href="demos/real-estate/real-estate.css" type="text/css" />
-
+	<link rel="stylesheet" href="demos/business/business.css" type="text/css" />
 	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<style>
@@ -260,71 +260,70 @@
 					<div class="heading-block">
 						<h1 style="color:#005aab;">Daisin Co.,Ltd</h1>
 					</div>
-							<div class="oc-item">
-								<div class="row cleafix">
-									<div class="col-xl-8">
-										<div class="swiper-container">
-											<div class="swiper-wrapper">
-											  <div class="swiper-slide">
-												<img src="images/MOU/1.png" alt="MOU">
-											  </div>
-											  <div class="swiper-slide">
-												<img src="images/MOU/2.png" alt="MOU">
-											  </div>
-											  <div class="swiper-slide">
-												<img src="images/MOU/3.png" alt="MOU">
-											  </div>
-											  <div class="swiper-slide">
-												<img src="images/MOU/4.png" alt="MOU">
-											  </div>
-											</div>
-											<div class="swiper-pagination"></div>
+				</div>
+					<div id="oc-features" class="owl-carousel owl-carousel-full image-carousel carousel-widget customjs">
+						<div class="oc-item">
+							<div class="row cleafix">
+								<div class="col-xl-8">
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+										  <div class="swiper-slide">
+											<img src="images/MOU/1.png" alt="MOU">
 										  </div>
-									</div>
-									<div class="col-xl-4" style="padding: 20px 0 0 20px;">
-										<p style="font-size: 22px;" id="txt_about2"></p>
-										<p style="font-size: 22px;" id="txt_about22"></p>
-									</div>
+										  <div class="swiper-slide">
+											<img src="images/MOU/2.png" alt="MOU">
+										  </div>
+										  <div class="swiper-slide">
+											<img src="images/MOU/3.png" alt="MOU">
+										  </div>
+										  <div class="swiper-slide">
+											<img src="images/MOU/4.png" alt="MOU">
+										  </div>
+										</div>
+										<div class="swiper-pagination"></div>
+									  </div>
+								</div>
+								<div class="col-xl-4">
+									<p style="font-size: 22px;" id="txt_about2"></p>
+									<p style="font-size: 22px;" id="txt_about22"></p>
 								</div>
 							</div>
 						</div>
-			</div>
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-lg-4">
-							
-							<img src="images/HP2.png" alt="Avatar" class="lift focus" width="100%" data-animate="rotateInDownLeft">
-							<br><br>
-							<p class="lead" id="txt_about1" data-animate="rotateInDownLeft"></p>
-							<!--<p class="lead">As a result of our capabilities and lufelong experience, Daisin is highly regarded as one of Thailand 's leading aluminium vehicle parts manafacturers.</p>-->
-								<!--<a href="#" class="button button-border button-dark button-rounded button-large ms-0 topmargin-sm">About us</a>-->
-						</div>
 
-						<div class="col-lg-8 align-self-end">
-
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
-								  <div class="swiper-slide">
-									<img src="images/D1.png" alt="Daisin" style="margin-bottom: 20px;">
-								  </div>
-								  <div class="swiper-slide">
-									<img src="images/D2.png" alt="Daisin">
-								  </div>
-								  <div class="swiper-slide">
-									<img src="images/D3.png" alt="Daisin">
-								  </div>
+						<div class="oc-item">
+							<div class="row cleafix">
+								<div class="col-xl-8">
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="images/D1.png" alt="Daisin">
+											  </div>
+											  <div class="swiper-slide">
+												<img src="images/D2.png" alt="Daisin">
+											  </div>
+											  <div class="swiper-slide">
+												<img src="images/D3.png" alt="Daisin">
+											  </div>
+										</div>
+										<div class="swiper-pagination"></div>
+									  </div>
 								</div>
-								<div class="swiper-pagination"></div>
-							  </div>
+								<div class="col-xl-4">
+									<img src="images/HP2.png" alt="Avatar" class="lift focus" width="100%" data-animate="rotateInDownLeft">
+							<br><br>
+							<p style="font-size: 22px;" id="txt_about1" data-animate="rotateInDownLeft"></p>
+								</div>
+							</div>
 						</div>
 
 					</div>
-				</div>
+			
+				
 				<br><br>
 
 				
 
-				<!--<div class="container clearfix">
+				<!--<div class="container clearfix">	
 					<h2 align="center" style="color: #005aab;">Associated Company</h2>
 
 					<div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="60" data-loop="true" data-nav="true" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="6">
@@ -618,7 +617,23 @@ renderlang()
 		  delay: 5000,
 		  disableOnInteraction: false,
 		},
+		cssMode: true, // Enable CSS Mode
 	  });
+
+	  jQuery(window).on( 'pluginCarouselReady', function(){
+			$('#oc-features').owlCarousel({
+				items: 1,
+				margin: 60,
+			    nav: true,
+			    navText: ['<i class="icon-line-arrow-left"></i>','<i class="icon-line-arrow-right"></i>'],
+			    dots: false,
+			    stagePadding: 30,
+			    responsive:{
+					768: { items: 2 },
+					1200: { stagePadding: 200 }
+				},
+			});
+		});
 	  </script>
 
 	<!-- Footer Scripts
