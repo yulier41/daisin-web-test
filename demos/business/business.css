@@ -6,7 +6,7 @@
 
 /* Feaured Carousel
 -----------------------------------------------------------------*/
-#oc-features .owl-item:not(.active) { opacity: .4; }
+#oc-features .owl-item:not(.active) { opacity: 0; }
 
 #oc-features .owl-item p {
 	font-size: 16px;
