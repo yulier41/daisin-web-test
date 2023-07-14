@@ -9,7 +9,7 @@
 }
 @media (max-resolution: 125dpi) and (min-resolution: 120dpi) {
 	.real-estate-properties [class^=col-] > a {
-	  height: 652px;
+	  height: 657px;
 	}
   }
   @media (max-resolution: 150dpi) and (min-resolution: 140dpi) {
