@@ -4,7 +4,7 @@
 
 .real-estate-properties [class^=col-] > a {
 	display: block;
-	height: 868px;
+	height: 875px;
 	background-color: #EEE;
 }
 @media (max-resolution: 125dpi) and (min-resolution: 120dpi) {
